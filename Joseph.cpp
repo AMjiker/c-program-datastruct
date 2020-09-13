@@ -12,6 +12,7 @@ Link iniNode(int data){
 	p->next = NULL;
 	return p;
 }
+
 int printNode(Link head){
 	Link cur = head;
 	Link temp = head->next;
