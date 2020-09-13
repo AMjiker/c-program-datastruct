@@ -41,7 +41,7 @@ void Joseph(int n, int m ,int j){
 		temp = temp->next;
 	}
 	temp->next = head;
-	printf("×Ü³¤¶È%d \n",printNode(head));
+	printf("æ€»é•¿åº¦%d \n",printNode(head));
 	
 	while(head->data != j && j <= n && j!= 0){
 		head = head->next; 
@@ -51,7 +51,7 @@ void Joseph(int n, int m ,int j){
 	while(temp->next != temp){
 		if( i == m-1){
 			k++; 
-			printf("µÚ%d¸ö±»É¾³ıµÄÊı¾İÎª%d\n",k,temp->next->data);
+			printf("ç¬¬%dä¸ªè¢«åˆ é™¤çš„æ•°æ®ä¸º%d\n",k,temp->next->data);
 			temp->next = temp->next->next;
 			printNode(temp);
 			i = 0;
@@ -60,12 +60,12 @@ void Joseph(int n, int m ,int j){
 		i ++;
 		temp = temp->next;
 	}
-	printf("×îºóÁôÏÂµÄÊı¾İÎª:%d",temp->data);
+	printf("æœ€åç•™ä¸‹çš„æ•°æ®ä¸º:%d",temp->data);
 }
 
 int main(){
 	int i,j,k;
-	printf("ÇëÊäÈëJoseph»·µÄÈËÊıÒÔ¼°Ã¿Óöµ½¼¸¸öÈËÄÇ¸öÈËÍË³öÒÔ¼°´ÓµÚ¼¸¸öÈË¿ªÊ¼\n");
+	printf("è¯·è¾“å…¥Josephç¯çš„äººæ•°ä»¥åŠæ¯é‡åˆ°å‡ ä¸ªäººé‚£ä¸ªäººé€€å‡ºä»¥åŠä»ç¬¬å‡ ä¸ªäººå¼€å§‹\n");
 	scanf("%d %d %d",&i,&j,&k);
 	Joseph(i,j,k);
 	return 0;
