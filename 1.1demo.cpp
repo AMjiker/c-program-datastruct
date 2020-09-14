@@ -79,7 +79,7 @@ int Del_List1(SqList &L, ElemType e)
 Status  Del_List2(SqList &L, int i, ElemType &e)
 // 在顺序表L中删除第i个元素，被删元素用参数e带回
 {
-     if (i< 1 && i>=L.length) return  ERROR;
+     if (i< 1 || i>=L.length) return  ERROR;
 	 int  j;
 	 e=L.elem[i-1];
      for(j=i; j<L.length; j++) 
