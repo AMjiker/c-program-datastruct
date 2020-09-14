@@ -14,7 +14,7 @@ Link iniNode(int data){
 }
 
 int printNode(Link head){
-	Link cur = head;
+	// Link cur = head;
 	Link temp = head->next;
 	int i = 1;
 	printf("%d  ",head->data);
@@ -52,8 +52,10 @@ void Joseph(int n, int m ,int j){
 		if( i == m-1){
 			k++; 
 			printf("第%d个被删除的数据为%d\n",k,temp->next->data);
+			p = temp->next;
 			temp->next = temp->next->next;
 			printNode(temp);
+			free(p);
 			i = 0;
 		}
 		
