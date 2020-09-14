@@ -23,7 +23,7 @@ LNode *p,*q, *s;
 		scanf("%d", &s->data);
 		p=L;
 		q=L->next;
-        while(q != NULL) {  //1 	//定位指针q指向插入点
+        while(q != NULL && q->data <= s->data) {  //1 	//定位指针q指向插入点
 		    p = q;  	//2		//p为q的直接前驱
             q=q->next;
 	    }
