@@ -19,7 +19,7 @@ Status  CreatList(SqList &L) {		// 建立有n个元素的顺序表
 	do {							// 若表的长度输入不合法，则循环输入
 		printf("请输入元素个数：");
 		scanf("%d", &L.length );
-	} while( L.length < 0 ); // 1
+	} while( L.length < 0 || L.length > L.listsize); // 1
 	L.elem=(ElemType *)malloc(MAXSIZE*sizeof(ElemType));
 	if(!L.elem) return ERROR;
 	for(i=0; i<L.length; i++)  {		// 依次输入n个元素
@@ -31,11 +31,11 @@ Status  CreatList(SqList &L) {		// 建立有n个元素的顺序表
 
 Status  InsertList (SqList &L, int i, int m, ElemType *E) {
 // 在顺序表L的第i个位置上插入m个新元素E[]
-   if (i<0 || m <= 0 ) // 进行i、m的合法性判断 // 3
+   if (i<1 || i > L.length+1|| m <1 ) // 进行i、m的合法性判断 // 3
 		return  ERROR;
    ElemType  *p;
    int  j;
-   if( i+m > L.listsize ) {	//若顺序表空间不够，则需扩充空间 //4
+   if( L.length+m > L.listsize ) {	//若顺序表空间不够，则需扩充空间 //4
       p=(ElemType *)realloc(L.elem, (L.length+m)*sizeof(ElemType));
       if (!p) exit (OVERFLOW);
       L.elem=p;
