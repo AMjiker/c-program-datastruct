@@ -8,6 +8,6 @@ You can press shift to open the power shell in the current directory, enter star
 ***
 ***
 ~~数据结构实验代码存放处~~
-里面存放了 [^数据结构] 代码.
+里面存放了 [数据结构] 代码.
 
 [^数据结构]:现在更新到第四章
